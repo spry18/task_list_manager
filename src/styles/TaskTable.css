@@ -1,0 +1,326 @@
+/* TaskTable.css */
+
+.table-container {
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 1000px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: "Montserrat", sans-serif; /* Apply font-family here */
+}
+
+.tabulator {
+  border: none;
+  font-family: "Montserrat", sans-serif; /* Ensure table font matches */
+}
+
+.tabulator .tabulator-row {
+  border-bottom: 1px solid #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.tabulator .tabulator-row:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+.tabulator .tabulator-cell {
+  font-size: 14px;
+  padding: 8px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+
+.tabulator .tabulator-header {
+  background-color: #4a90e2;
+  color: #000;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.tabulator .tabulator-header .tabulator-col {
+  padding: 8px;
+}
+
+.tabulator-cell input,
+.tabulator-cell select {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.delete-btn,
+.cancel-btn {
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cancel-btn {
+  background-color: #ff9900;
+  font-family: "Montserrat", sans-serif;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between; /* Distribute the items across the row */
+  align-items: center; /* Vertically align items */
+  margin-bottom: 10px; /* Add spacing below the header */
+  font-family: "Montserrat", sans-serif;
+}
+
+.task-counters {
+  flex: 1; /* Allow counters to take up space on the left */
+  display: flex;
+  gap: 15px; /* Space between counters */
+  justify-content: flex-start; /* Align to the left */
+  font-family: "Montserrat", sans-serif;
+}
+
+.search-container {
+  flex: 1; /* Allow search bar to occupy the middle */
+  display: flex;
+  justify-content: center; /* Center align the search bar */
+  align-items: center; /* Vertically align */
+}
+
+.search-container input {
+  padding: 5px;
+  width: 100%; /* Make the input responsive */
+  max-width: 300px; /* Optional: Limit maximum width */
+  font-family: "Montserrat", sans-serif;
+}
+
+.filter-container {
+  flex: 1; /* Allow the filter to occupy the right */
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center; /* Vertically align */
+  margin-top: 20px;
+}
+
+#status-filter {
+  margin-left: 5px;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Default Styles Applied for Larger Screens */
+
+/* For Very Small Screens: max-width 320px */
+@media (max-width: 320px) {
+  .table-container {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .tabulator .tabulator-header,
+  .tabulator .tabulator-cell {
+    font-size: 12px; /* Reduce text size for readability */
+  }
+
+  .task-header {
+    flex-direction: column; /* Stack header content vertically */
+  }
+
+  .task-counters,
+  .search-container,
+  .filter-container {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-container input {
+    width: 100%; /* Ensure search bar occupies full width */
+    max-width: none; /* Remove width limitation for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .task-counters {
+    flex: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .filter-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* For Small Phones: 320px to 375px */
+@media (min-width: 320px) and (max-width: 375px) {
+  .table-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .tabulator .tabulator-header,
+  .tabulator .tabulator-cell {
+    font-size: 13px;
+  }
+
+  .task-header {
+    flex-direction: column; /* Stack header content vertically */
+  }
+
+  .task-counters,
+  .search-container,
+  .filter-container {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-container input {
+    width: 100%; /* Ensure search bar occupies full width */
+    max-width: none; /* Remove width limitation for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .task-counters {
+    flex: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .filter-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* For Small and Medium Phones: 375px to 425px */
+@media (min-width: 375px) and (max-width: 425px) {
+  .table-container {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .tabulator .tabulator-header,
+  .tabulator .tabulator-cell {
+    font-size: 13px; /* Adjust font size */
+  }
+
+  .task-header {
+    flex-direction: column; /* Stack header content vertically */
+    align-items: flex-start;
+  }
+
+  .task-counters,
+  .search-container,
+  .filter-container {
+    display: flex;
+    flex-direction: column; /* Ensure these items are stacked vertically */
+    gap: 12px;
+    width: 100%; /* Ensure full width on these smaller devices */
+  }
+
+  .task-counters {
+    flex: none;
+  }
+
+  .filter-container {
+    margin-top: 10px;
+    justify-content: flex-start; /* Align to left if needed */
+  }
+
+  .search-container input {
+    width: 60%;
+    max-width: none; /* Allow full width to the input */
+  }
+
+  .filter-container {
+    justify-content: flex-start; /* Optionally align filters to the left */
+  }
+}
+
+/* For Tablets and Larger Phones: 425px to 768px */
+@media (min-width: 425px) and (max-width: 768px) {
+  .table-container {
+    padding: 25px;
+    margin: 20px;
+  }
+
+  .tabulator .tabulator-header,
+  .tabulator .tabulator-cell {
+    font-size: 15px;
+  }
+
+  .task-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .task-counters {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .filter-container {
+    margin-top: 20px;
+    justify-content: flex-end;
+  }
+
+  .search-container input {
+    width: 80%; /* Limit width for better readability */
+  }
+
+  .task-counters,
+  .filter-container {
+    gap: 15px;
+  }
+}
+
+/* For Screens Larger Than 768px */
+@media (min-width: 768px) {
+  .table-container {
+    padding: 30px;
+    margin: 30px;
+    max-width: 1000px; /* Maximum width of the table container */
+  }
+
+  .task-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .task-counters,
+  .search-container,
+  .filter-container {
+    gap: 20px;
+  }
+
+  .task-counters {
+    flex: 1;
+  }
+
+  .search-container {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .filter-container {
+    flex: 1;
+    justify-content: flex-end;
+  }
+}

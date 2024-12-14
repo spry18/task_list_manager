@@ -1,0 +1,244 @@
+/* TaskForm.css */
+
+.task-form {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.task-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-right: 15px;
+  width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555555;
+  text-align: right;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-button,
+.cancel-button {
+  width: 48%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  margin-right: 4%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.submit-button {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #357abd;
+}
+
+.cancel-button {
+  background-color: #f4f4f4;
+  color: #333333;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Default Styles Applied for Larger Screens */
+
+/* For Very Small Screens: max-width 320px */
+@media (max-width: 320px) {
+  .task-form {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .task-form h2 {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    width: 90px;
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 12px;
+  }
+
+  .submit-button,
+  .cancel-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* For Small Phones: 320px to 375px */
+@media (min-width: 320px) and (max-width: 375px) {
+  .task-form {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-group label {
+    width: 95px;
+    margin-bottom: 6px;
+    text-align: left;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .submit-button,
+  .cancel-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* For Medium Phones: 375px to 425px */
+@media (min-width: 375px) and (max-width: 425px) {
+  .task-form {
+    padding: 18px;
+    margin: 15px;
+  }
+
+  .form-group label {
+    width: 110px;
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .submit-button,
+  .cancel-button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* For Tablets and Larger Phones: 425px to 768px */
+@media (min-width: 425px) and (max-width: 768px) {
+  .task-form {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .form-group label {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  .submit-button,
+  .cancel-button {
+    font-size: 16px;
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  .button-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .task-form {
+    padding: 15px;
+    margin: 10px;
+    max-width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-group label {
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .submit-button,
+  .cancel-button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+}

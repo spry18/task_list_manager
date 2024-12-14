@@ -1,0 +1,186 @@
+/* TaskManager.css */
+
+.task-manager {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.task-manager h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.task-manager .filter-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.task-manager .filter-container select {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-manager .filter-container select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fade-in-out 3s ease forwards;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  20%,
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* For 320px */
+@media (max-width: 320px) {
+  .task-manager {
+    padding: 15px;
+  }
+
+  .task-manager h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .task-manager .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .task-manager .filter-container select {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+/* For 320px - 375px */
+@media (min-width: 320px) and (max-width: 375px) {
+  .task-manager {
+    padding: 15px;
+  }
+
+  .task-manager h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .task-manager .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .task-manager .filter-container select {
+    font-size: 13px;
+    width: 100%;
+  }
+}
+
+/* For 375px - 425px */
+@media (min-width: 375px) and (max-width: 425px) {
+  .task-manager {
+    padding: 18px;
+  }
+
+  .task-manager h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .task-manager .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .task-manager .filter-container select {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+/* For 425px - 768px */
+@media (min-width: 425px) and (max-width: 768px) {
+  .task-manager {
+    padding: 20px;
+  }
+
+  .task-manager h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .task-manager .filter-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .task-manager .filter-container select {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* For 768px and larger */
+@media (min-width: 768px) {
+  .task-manager {
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .task-manager h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .task-manager .filter-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .task-manager .filter-container select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .notification {
+    bottom: 30px;
+    right: 30px;
+  }
+}
